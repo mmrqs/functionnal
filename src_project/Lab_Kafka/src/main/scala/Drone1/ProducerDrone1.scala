@@ -72,6 +72,8 @@ object ProducerDrone1 extends App {
     else {
       producer.send(new ProducerRecord[String, String]("SOS-SENDER", id.toString + "," + strDate +","+ x.toString +","+ y.toString
       + "," + Constants.picture))
+
+      
     }
 
     Thread.sleep(50000)
