@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20200401185320"/>
+		date="20200405230242"/>
 	<dependencies>
 		<module organisation="org.apache.kafka" name="kafka_2.13">
 			<revision name="2.4.1" status="release" pubdate="20200303022954" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://kafka.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="30">
@@ -15,7 +15,7 @@
 				<metadata-artifact status="no" details="" size="17383" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.kafka/kafka_2.13/ivy-2.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kafka/kafka_2.13/2.4.1/kafka_2.13-2.4.1.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.4.1" rev-constraint-default="2.4.1" rev-constraint-dynamic="2.4.1" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="kafka_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="788543" time="6875" location="/Users/melaniemarques/.ivy2/cache/org.apache.kafka/kafka_2.13/srcs/kafka_2.13-2.4.1-sources.jar">
+					<artifact name="kafka_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="788543" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.kafka/kafka_2.13/srcs/kafka_2.13-2.4.1-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/kafka/kafka_2.13/2.4.1/kafka_2.13-2.4.1-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -27,7 +27,7 @@
 				<metadata-artifact status="no" details="" size="30365" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.10.0/jackson-dataformat-csv-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-dataformat-csv" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="85156" time="9383" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/srcs/jackson-dataformat-csv-2.10.0-sources.jar">
+					<artifact name="jackson-dataformat-csv" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="85156" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/srcs/jackson-dataformat-csv-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.10.0/jackson-dataformat-csv-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -39,7 +39,7 @@
 				<metadata-artifact status="no" details="" size="4008" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.kafka/kafka-clients/ivy-2.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.1/kafka-clients-2.4.1.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.4.1" rev-constraint-default="2.4.1" rev-constraint-dynamic="2.4.1" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="kafka-clients" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1955460" time="28296" location="/Users/melaniemarques/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-2.4.1-sources.jar">
+					<artifact name="kafka-clients" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1955460" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.kafka/kafka-clients/srcs/kafka-clients-2.4.1-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.4.1/kafka-clients-2.4.1-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -51,7 +51,7 @@
 				<metadata-artifact status="no" details="" size="30053" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.0/jackson-datatype-jdk8-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-datatype-jdk8" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="21988" time="8387" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/srcs/jackson-datatype-jdk8-2.10.0-sources.jar">
+					<artifact name="jackson-datatype-jdk8" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="21988" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/srcs/jackson-datatype-jdk8-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.0/jackson-datatype-jdk8-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -63,7 +63,7 @@
 				<metadata-artifact status="no" details="" size="3941" time="0" location="/Users/melaniemarques/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.1.7.3" rev-constraint-default="1.1.7.3" rev-constraint-dynamic="1.1.7.3" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="snappy-java" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="2013320" time="26664" location="/Users/melaniemarques/.ivy2/cache/org.xerial.snappy/snappy-java/srcs/snappy-java-1.1.7.3-sources.jar">
+					<artifact name="snappy-java" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2013320" time="0" location="/Users/melaniemarques/.ivy2/cache/org.xerial.snappy/snappy-java/srcs/snappy-java-1.1.7.3-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -75,7 +75,7 @@
 				<metadata-artifact status="no" details="" size="2736" time="0" location="/Users/melaniemarques/.ivy2/cache/org.lz4/lz4-java/ivy-1.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="lz4-java" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="63617" time="15697" location="/Users/melaniemarques/.ivy2/cache/org.lz4/lz4-java/srcs/lz4-java-1.6.0-sources.jar">
+					<artifact name="lz4-java" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="63617" time="0" location="/Users/melaniemarques/.ivy2/cache/org.lz4/lz4-java/srcs/lz4-java-1.6.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -87,7 +87,7 @@
 				<metadata-artifact status="no" details="" size="3031" time="0" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.13/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scala-java8-compat_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="24626" time="12997" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.13/srcs/scala-java8-compat_2.13-0.9.0-sources.jar">
+					<artifact name="scala-java8-compat_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="24626" time="0" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.13/srcs/scala-java8-compat_2.13-0.9.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -99,7 +99,7 @@
 				<metadata-artifact status="no" details="" size="5347" time="0" location="/Users/melaniemarques/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.28.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.7.28" rev-constraint-default="1.7.28" rev-constraint-dynamic="1.7.28" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="58095" time="10194" location="/Users/melaniemarques/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.28-sources.jar">
+					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="58095" time="0" location="/Users/melaniemarques/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.28-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -111,7 +111,7 @@
 				<metadata-artifact status="no" details="" size="2874" time="0" location="/Users/melaniemarques/.ivy2/cache/com.github.luben/zstd-jni/ivy-1.4.3-1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.4.3-1" rev-constraint-default="1.4.3-1" rev-constraint-dynamic="1.4.3-1" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="zstd-jni" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="17626" time="5929" location="/Users/melaniemarques/.ivy2/cache/com.github.luben/zstd-jni/srcs/zstd-jni-1.4.3-1-sources.jar">
+					<artifact name="zstd-jni" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17626" time="0" location="/Users/melaniemarques/.ivy2/cache/com.github.luben/zstd-jni/srcs/zstd-jni-1.4.3-1-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -123,7 +123,7 @@
 				<metadata-artifact status="no" details="" size="11817" time="0" location="/Users/melaniemarques/.ivy2/cache/commons-cli/commons-cli/ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="commons-cli" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="63104" time="5735" location="/Users/melaniemarques/.ivy2/cache/commons-cli/commons-cli/srcs/commons-cli-1.4-sources.jar">
+					<artifact name="commons-cli" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="63104" time="0" location="/Users/melaniemarques/.ivy2/cache/commons-cli/commons-cli/srcs/commons-cli-1.4-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -135,7 +135,7 @@
 				<metadata-artifact status="no" details="" size="3357" time="0" location="/Users/melaniemarques/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.13/ivy-3.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/scala-logging/scala-logging_2.13/3.9.2/scala-logging_2.13-3.9.2.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.9.2" rev-constraint-default="3.9.2" rev-constraint-dynamic="3.9.2" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scala-logging_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="11680" time="5330" location="/Users/melaniemarques/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.13/srcs/scala-logging_2.13-3.9.2-sources.jar">
+					<artifact name="scala-logging_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="11680" time="0" location="/Users/melaniemarques/.ivy2/cache/com.typesafe.scala-logging/scala-logging_2.13/srcs/scala-logging_2.13-3.9.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/scala-logging/scala-logging_2.13/3.9.2/scala-logging_2.13-3.9.2-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -159,7 +159,7 @@
 				<metadata-artifact status="no" details="" size="15029" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.zookeeper/zookeeper/ivy-3.5.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.5.7/zookeeper-3.5.7.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.5.7" rev-constraint-default="3.5.7" rev-constraint-dynamic="3.5.7" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="zookeeper" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="662499" time="5068" location="/Users/melaniemarques/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.5.7-sources.jar">
+					<artifact name="zookeeper" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="662499" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.zookeeper/zookeeper/srcs/zookeeper-3.5.7-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper/3.5.7/zookeeper-3.5.7-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -171,7 +171,7 @@
 				<metadata-artifact status="no" details="" size="11297" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.zookeeper/zookeeper-jute/ivy-3.5.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper-jute/3.5.7/zookeeper-jute-3.5.7.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="3.5.7" rev-constraint-default="3.5.7" rev-constraint-dynamic="3.5.7" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="zookeeper-jute" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="189276" time="15708" location="/Users/melaniemarques/.ivy2/cache/org.apache.zookeeper/zookeeper-jute/srcs/zookeeper-jute-3.5.7-sources.jar">
+					<artifact name="zookeeper-jute" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="189276" time="0" location="/Users/melaniemarques/.ivy2/cache/org.apache.zookeeper/zookeeper-jute/srcs/zookeeper-jute-3.5.7-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/zookeeper/zookeeper-jute/3.5.7/zookeeper-jute-3.5.7-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -195,7 +195,7 @@
 				<metadata-artifact status="no" details="" size="3898" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.13/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.10.0/jackson-module-scala_2.13-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-module-scala_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="52273" time="4423" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.13/srcs/jackson-module-scala_2.13-2.10.0-sources.jar">
+					<artifact name="jackson-module-scala_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="52273" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.13/srcs/jackson-module-scala_2.13-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.10.0/jackson-module-scala_2.13-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -207,7 +207,7 @@
 				<metadata-artifact status="no" details="" size="30539" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.10.0/jackson-module-paranamer-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-module-paranamer" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="9918" time="20144" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/srcs/jackson-module-paranamer-2.10.0-sources.jar">
+					<artifact name="jackson-module-paranamer" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="9918" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/srcs/jackson-module-paranamer-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-paranamer/2.10.0/jackson-module-paranamer-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -219,7 +219,7 @@
 				<metadata-artifact status="no" details="" size="19806" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport-native-epoll/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.45.Final/netty-transport-native-epoll-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-transport-native-epoll" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="86974" time="4635" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport-native-epoll/srcs/netty-transport-native-epoll-4.1.45.Final-sources.jar">
+					<artifact name="netty-transport-native-epoll" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="86974" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport-native-epoll/srcs/netty-transport-native-epoll-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.45.Final/netty-transport-native-epoll-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -231,7 +231,7 @@
 				<metadata-artifact status="no" details="" size="18919" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport-native-unix-common/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-unix-common/4.1.45.Final/netty-transport-native-unix-common-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-transport-native-unix-common" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="55494" time="5135" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport-native-unix-common/srcs/netty-transport-native-unix-common-4.1.45.Final-sources.jar">
+					<artifact name="netty-transport-native-unix-common" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="55494" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport-native-unix-common/srcs/netty-transport-native-unix-common-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-unix-common/4.1.45.Final/netty-transport-native-unix-common-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -243,7 +243,7 @@
 				<metadata-artifact status="no" details="" size="24410" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1039017" time="8898" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.10.0-sources.jar">
+					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1039017" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -255,7 +255,7 @@
 				<metadata-artifact status="no" details="" size="23649" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="364532" time="8751" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.10.0-sources.jar">
+					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="364532" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -267,7 +267,7 @@
 				<metadata-artifact status="no" details="" size="8050" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="72080" time="4635" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.10.0-sources.jar">
+					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="72080" time="0" location="/Users/melaniemarques/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.10.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -279,7 +279,7 @@
 				<metadata-artifact status="no" details="" size="2837" time="0" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.13.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.1/scala-reflect-2.13.1.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.13.1" rev-constraint-default="2.13.1" rev-constraint-dynamic="2.13.1" callerrev="0.1" extra-info.apiURL="https://www.scala-lang.org/api/2.13.1/"/>
 				<artifacts>
-					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="632872" time="8215" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.13.1-sources.jar">
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="632872" time="0" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.13.1-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.1/scala-reflect-2.13.1-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -303,7 +303,7 @@
 				<metadata-artifact status="no" details="" size="4254" time="0" location="/Users/melaniemarques/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.8" rev-constraint-default="2.8" rev-constraint-dynamic="2.8" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="paranamer" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="27125" time="7966" location="/Users/melaniemarques/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.8-sources.jar">
+					<artifact name="paranamer" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="27125" time="0" location="/Users/melaniemarques/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.8-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -315,7 +315,7 @@
 				<metadata-artifact status="no" details="" size="19401" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-handler/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.45.Final/netty-handler-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-handler" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="300494" time="8577" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-handler/srcs/netty-handler-4.1.45.Final-sources.jar">
+					<artifact name="netty-handler" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="300494" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-handler/srcs/netty-handler-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-handler/4.1.45.Final/netty-handler-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -327,7 +327,7 @@
 				<metadata-artifact status="no" details="" size="19232" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-codec/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.45.Final/netty-codec-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-codec" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="259338" time="23519" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-codec/srcs/netty-codec-4.1.45.Final-sources.jar">
+					<artifact name="netty-codec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="259338" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-codec/srcs/netty-codec-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.45.Final/netty-codec-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -339,7 +339,7 @@
 				<metadata-artifact status="no" details="" size="17916" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.45.Final/netty-transport-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-transport" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="316469" time="8783" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport/srcs/netty-transport-4.1.45.Final-sources.jar">
+					<artifact name="netty-transport" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="316469" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-transport/srcs/netty-transport-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.45.Final/netty-transport-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -351,7 +351,7 @@
 				<metadata-artifact status="no" details="" size="17619" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-resolver/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.45.Final/netty-resolver-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-resolver" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="24520" time="4422" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-resolver/srcs/netty-resolver-4.1.45.Final-sources.jar">
+					<artifact name="netty-resolver" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="24520" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-resolver/srcs/netty-resolver-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.45.Final/netty-resolver-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -363,7 +363,7 @@
 				<metadata-artifact status="no" details="" size="17613" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-buffer/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.45.Final/netty-buffer-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-buffer" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="174571" time="23490" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-buffer/srcs/netty-buffer-4.1.45.Final-sources.jar">
+					<artifact name="netty-buffer" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="174571" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-buffer/srcs/netty-buffer-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-buffer/4.1.45.Final/netty-buffer-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -375,7 +375,7 @@
 				<metadata-artifact status="no" details="" size="21390" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-common/ivy-4.1.45.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-common/4.1.45.Final/netty-common-4.1.45.Final.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="4.1.45.Final" rev-constraint-default="4.1.45.Final" rev-constraint-dynamic="4.1.45.Final" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="netty-common" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="531630" time="10658" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-common/srcs/netty-common-4.1.45.Final-sources.jar">
+					<artifact name="netty-common" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="531630" time="0" location="/Users/melaniemarques/.ivy2/cache/io.netty/netty-common/srcs/netty-common-4.1.45.Final-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-common/4.1.45.Final/netty-common-4.1.45.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -399,7 +399,7 @@
 				<metadata-artifact status="no" details="" size="2819" time="0" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang.modules/scala-collection-compat_2.13/ivy-2.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.1.2/scala-collection-compat_2.13-2.1.2.pom"/>
 				<caller organisation="default" name="lab_kafka$sources" conf="test, compile, provided, test-internal, runtime, optional" rev="2.1.2" rev-constraint-default="2.1.2" rev-constraint-dynamic="2.1.2" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="scala-collection-compat_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1754" time="7966" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang.modules/scala-collection-compat_2.13/srcs/scala-collection-compat_2.13-2.1.2-sources.jar">
+					<artifact name="scala-collection-compat_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1754" time="0" location="/Users/melaniemarques/.ivy2/cache/org.scala-lang.modules/scala-collection-compat_2.13/srcs/scala-collection-compat_2.13-2.1.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.1.2/scala-collection-compat_2.13-2.1.2-sources.jar"/>
 					</artifact>
 				</artifacts>
