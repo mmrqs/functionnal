@@ -2,15 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5827eb5-e144-4b48-8523-878a1c17565a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Drone1/Consumer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Drone1/LauncherDrone1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Drone1/Pacerelle.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Drone1/Producer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Lab_kafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Lab_kafka.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone1/ProducerDrone1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Drone1/ProducerDrone1.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone2/ProducerDrone2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Drone2/ProducerDrone2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone3/ProducerDrone3.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Drone3/ProducerDrone3.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Technician/ProducerTechnician.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Technician/ProducerTechnician.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ProducerDrone1$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ProducerDrone1$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/META-INF/Lab_kafka.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0f839ede3eecf201995e$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0f839ede3eecf201995e.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0f839ede3eecf201995e.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$13bb4649a1246607967b$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$13bb4649a1246607967b.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$13bb4649a1246607967b.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$142a2a622efe4ab112ec$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$142a2a622efe4ab112ec.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$142a2a622efe4ab112ec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7a9f9aae740f492327ad$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7a9f9aae740f492327ad.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7a9f9aae740f492327ad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7ce6b62b193d3aa66731$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7ce6b62b193d3aa66731.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7ce6b62b193d3aa66731.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$acc1c44f899f377bbfc7$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$acc1c44f899f377bbfc7.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$acc1c44f899f377bbfc7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b52ca8c3ecdc447ee991$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b52ca8c3ecdc447ee991.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b52ca8c3ecdc447ee991.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c87ce2fd4b38035b91f8$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c87ce2fd4b38035b91f8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c87ce2fd4b38035b91f8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cc442198d6cc8bdbe33f$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cc442198d6cc8bdbe33f.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cc442198d6cc8bdbe33f.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d2fd682df67fb6253f2a$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d2fd682df67fb6253f2a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d2fd682df67fb6253f2a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lab_kafka-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lab_kafka-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lab_kafka-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/lab_kafka-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-lab_kafka-build-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone1/ConsumerDrone1.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone1/ProducerDrone1.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone2/ConsumerDrone2.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone2/ProducerDrone2.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone3/ConsumerDrone3.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Drone3/ProducerDrone3.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Utils/Constants.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Utils/Constants.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ConsumerDrone1$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ConsumerDrone1$Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ConsumerDrone1$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ConsumerDrone1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ProducerDrone1$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ProducerDrone1$Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ProducerDrone1$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone1/ProducerDrone1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ConsumerDrone2$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ConsumerDrone2$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ConsumerDrone2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ProducerDrone1$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ProducerDrone1$Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ProducerDrone1$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone2/ProducerDrone1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ConsumerDrone3$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ConsumerDrone3$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ConsumerDrone3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ProducerDrone3$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ProducerDrone3$Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ProducerDrone3$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Drone3/ProducerDrone3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Technician/ProducerTechnician$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Technician/ProducerTechnician$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Utils/Constants$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Utils/Constants$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Utils/Constants.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +113,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Scala Object" />
+        <option value="Package Object" />
       </list>
     </option>
   </component>
@@ -67,7 +152,7 @@
       <recent name="$PROJECT_DIR$/src/main/scala/AlertNotifications" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BigBrotherConsumer">
+  <component name="RunManager" selected="Compound.Unnamed">
     <configuration name="BigBrotherConsumer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="BigBrother.ConsumerBigBrother" />
       <module name="Lab_kafka" />
@@ -98,6 +183,13 @@
     </configuration>
     <configuration name="ConsumerTechnician" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Technician.ConsumerTechnician" />
+      <module name="Lab_kafka" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LauncherDrone1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Drone1.LauncherDrone1" />
       <module name="Lab_kafka" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,12 +244,18 @@
       <toRun name="ConsumerTechnician" type="Application" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CompoundRunConfigurationType">
-      <toRun name="ConsumerDrone1" type="Application" />
-      <toRun name="ConsumerTechnician" type="Application" />
+    <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <toRun name="BigBrotherConsumer" type="Application" />
+      <toRun name="ConsumerTechnician" type="Application" />
+      <toRun name="LauncherDrone1" type="Application" />
       <toRun name="ProducerTechnician" type="Application" />
-      <toRun name="ProducerDrone1" type="Application" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="BigBrotherConsumer" type="Application" />
+      <toRun name="ConsumerTechnician" type="Application" />
+      <toRun name="LauncherDrone1" type="Application" />
+      <toRun name="ProducerTechnician" type="Application" />
       <method v="2" />
     </configuration>
     <list>
@@ -166,12 +264,14 @@
       <item itemvalue="Application.ProducerDrone2" />
       <item itemvalue="Application.ProducerDrone3" />
       <item itemvalue="Application.BigBrotherConsumer" />
+      <item itemvalue="Application.LauncherDrone1" />
       <item itemvalue="Application.ProducerDrone1" />
       <item itemvalue="Application.ProducerTechnician" />
       <item itemvalue="Application.ConsumerDrone1" />
       <item itemvalue="Application.ConsumerTechnician" />
-      <item itemvalue="Compound.TaskForce" />
       <item itemvalue="Application.ProducerDrone1 (1)" />
+      <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="Compound.TaskForce" />
     </list>
     <recent_temporary>
       <list>
@@ -244,25 +344,30 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" width="811" height="669" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1586029971509" />
-    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586121032456">
+    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586194545315">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586121032456" />
-    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586123216299">
+    <state x="578" y="298" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586194545315" />
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586195255579">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586123216299" />
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586195255579" />
     <state x="533" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586029273520">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="533" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586029273520" />
-    <state x="577" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586121168882">
+    <state x="653" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1586187477173">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="577" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586121168882" />
-    <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586178527969">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="653" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586187477173" />
+    <state x="577" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586195231319">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="577" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586195231319" />
+    <state x="695" y="416" width="302" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586186476253">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="695" y="416" width="302" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586186476253" />
     <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1586178527969" />
     <state x="571" y="210" width="824" height="684" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1586178524942">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -272,46 +377,50 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="724" y="313" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1586178668732" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1586183703467">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1638" height="226" key="GridCell.Tab.0.bottom" timestamp="1586204268480">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="162" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586123226473" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1585778401517" />
+    <state width="1638" height="226" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268480" />
+    <state width="1638" height="226" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1586204258370" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586183703467" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1586183703465">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1638" height="226" key="GridCell.Tab.0.center" timestamp="1586204268478">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="162" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586123226472" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1585778401516" />
+    <state width="1638" height="226" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268478" />
+    <state width="1638" height="226" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1586204258369" />
     <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586183703465" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1586183703465">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1638" height="226" key="GridCell.Tab.0.left" timestamp="1586204268478">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="162" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586123226471" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1585778401515" />
+    <state width="1638" height="226" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268478" />
+    <state width="1638" height="226" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1586204258368" />
     <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586183703465" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1586183703466">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1638" height="226" key="GridCell.Tab.0.right" timestamp="1586204268479">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="162" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586123226472" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1585778401516" />
+    <state width="1638" height="226" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268479" />
+    <state width="1638" height="226" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1586204258369" />
     <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586183703466" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1585762835224">
+    <state width="1638" height="226" key="GridCell.Tab.1.bottom" timestamp="1586204268359">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585762835224" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1585762835223">
+    <state width="1638" height="226" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268359" />
+    <state width="1638" height="226" key="GridCell.Tab.1.bottom/0.23.1680.958@0.23.1680.958" timestamp="1586204258297" />
+    <state width="1638" height="226" key="GridCell.Tab.1.center" timestamp="1586204268358">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585762835223" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1585762835222">
+    <state width="1638" height="226" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268358" />
+    <state width="1638" height="226" key="GridCell.Tab.1.center/0.23.1680.958@0.23.1680.958" timestamp="1586204258295" />
+    <state width="1638" height="226" key="GridCell.Tab.1.left" timestamp="1586204268357">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585762835222" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1585762835223">
+    <state width="1638" height="226" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268357" />
+    <state width="1638" height="226" key="GridCell.Tab.1.left/0.23.1680.958@0.23.1680.958" timestamp="1586204258294" />
+    <state width="1638" height="226" key="GridCell.Tab.1.right" timestamp="1586204268358">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585762835223" />
+    <state width="1638" height="226" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586204268358" />
+    <state width="1638" height="226" key="GridCell.Tab.1.right/0.23.1680.958@0.23.1680.958" timestamp="1586204258295" />
     <state x="429" y="133" width="1024" height="845" key="SettingsEditor" timestamp="1586178673775">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

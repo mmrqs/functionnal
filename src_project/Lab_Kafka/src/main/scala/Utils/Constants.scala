@@ -17,14 +17,14 @@ object Constants {
   val picture = "http://vaniquertonpanda.com"
 
   // Alert message possibilities
-  val possibleAlerts = Seq(
-    "666 - Pandora a mangé le drone",
-    "001 - Ben fait du Biryani sur la voie publique",
-    "002 - Anil tente d'assassiner Brenda",
-    "003 - Louis a laissé ses bouteilles de vodka dans la rue",
-    "004 - Mélanie a mit un air KO à CHEREL",
-    "005 - Sébastien deal des pizzas",
-    "006 - Kévin lance une révolution",
-    "007 - Thomas bricole le drone"
+  val possibleAlerts = Map(
+    "666" -> "Pandora a mangé le drone",
+    "001" -> "Ben fait du Biryani sur la voie publique",
+    "002" -> "Anil tente d'assassiner Brenda",
+    "003" -> "Louis a laissé ses bouteilles de vodka dans la rue",
+    "004" -> "Mélanie a mit un air KO à CHEREL",
+    "005" -> "Sébastien deal des pizzas",
+    "006" -> "Kévin lance une révolution",
+    "007" -> "Thomas bricole le drone"
   )
 }
