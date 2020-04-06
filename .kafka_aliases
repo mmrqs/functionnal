@@ -1,0 +1,8 @@
+alias DC='docker-compose'
+alias DCEX='DC exec -T'
+alias kafka-console-producer='DCEX kafka kafka-console-producer'
+alias kafka-console-consumer='DCEX kafka kafka-console-consumer'
+alias kafka-topics='DCEX kafka kafka-topics'
+alias KCP='kafka-console-producer'
+alias KCC='kafka-console-consumer'
+alias KT='kafka-topics'

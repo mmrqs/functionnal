@@ -3,6 +3,7 @@
 
 # Project specific
 data/*
+.last_pid
 
 # Scala 
 *.class
