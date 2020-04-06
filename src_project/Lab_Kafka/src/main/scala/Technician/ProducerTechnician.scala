@@ -19,7 +19,6 @@ object ProducerTechnician extends App {
 
   // Periodic notifications simulation
   while(true) {
-
     print("Drone id :")
     val droneID = readLine()
     print("CODE : ")
