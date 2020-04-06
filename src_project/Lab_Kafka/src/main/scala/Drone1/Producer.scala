@@ -6,7 +6,7 @@ import java.util.{Calendar, Date, Properties}
 import Utils.Constants
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
-class Producer(var id : Int, var pacerelle: Pacerelle) extends Thread {
+class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
 
   var messageReceived: Boolean = false
 

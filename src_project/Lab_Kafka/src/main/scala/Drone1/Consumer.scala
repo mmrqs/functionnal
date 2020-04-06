@@ -7,7 +7,7 @@ import java.util.Properties
 
 import scala.collection.JavaConverters._
 
-class Consumer (var id : Int, var pacerelle : Pacerelle) extends Thread {
+class Consumer (var id : Int, var pacerelle : Bridge) extends Thread {
 
   override def run() {
     val props = new Properties()
