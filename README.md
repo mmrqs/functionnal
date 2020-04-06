@@ -8,13 +8,13 @@ To run them, simply use `./launch.sh` or `sudo bash launch.sh`.
 
 # Kafka shortcuts
 
-|              Original long-ass command              |   Shortened command    | Shorter ! |
-| :-------------------------------------------------: | :--------------------: | :-------: |
-|                   docker-compose                    |           /            |    DC     |
-|               docker-compose exec -T                |           /            |   DCEX    |
-| docker-compose exec -T kafka kafka-console-producer | kafka-console-producer |    KCP    |
-| docker-compose exec -T kafka kafka-console-consumer | kafka-console-consumer |    KCC    |
-|      docker-compose exec -T kafka kafka-topics      |      kafka-topics      |    KT     |
+|                               Original long-ass command                               |   Shortened command    | Shorter ! |
+| :-----------------------------------------------------------------------------------: | :--------------------: | :-------: |
+|                                    docker-compose                                     |           /            |    DC     |
+|                                docker-compose exec -T                                 |           /            |   DCEX    |
+| docker-compose exec -T kafka kafka-console-producer --bootstrap-server localhost:9092 | kafka-console-producer |    KCP    |
+| docker-compose exec -T kafka kafka-console-consumer --bootstrap-server localhost:9092 | kafka-console-consumer |    KCC    |
+|      docker-compose exec -T kafka kafka-topics --bootstrap-server localhost:9092      |      kafka-topics      |    KT     |
 
 ## If you don't have the flemme
 
@@ -36,10 +36,8 @@ And voilà! never again you will have to type those filthy long commands. Note t
 
 ## If you have the flemme
 
-Take this shit and run it
+If you trust me and my bash abilities (which you should neither never do) take this shit and run it
 
 ```bash
-cp .kafka_aliases ~/ && echo "if [ -f ~/.kafka_aliases ]; /
-then . ~/.kafka_aliases /
-fi" >> ~/.bashrc && source ~/.kafka_aliases
+cp .kafka_aliases ~/ && echo "[ -f ~/.kafka_aliases ] && . ~/.kafka_aliases" >> ~/.bashrc && source ~/.bashrc
 ```
