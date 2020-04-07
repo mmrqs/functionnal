@@ -4,7 +4,7 @@
 		module="lab_kafka-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20200406214345"
+		publication="20200407175413"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
