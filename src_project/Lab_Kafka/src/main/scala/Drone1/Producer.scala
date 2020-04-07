@@ -8,8 +8,6 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
 class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
 
-  var messageReceived: Boolean = false
-
   override def run() {
     val props = new Properties()
     props.put("bootstrap.servers", "localhost:9092")
@@ -29,13 +27,14 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
       val x = Constants.startC + rnd.nextInt( (Constants.endC - Constants.startC) + 1 )
       val y = Constants.startC + rnd.nextInt( (Constants.endC - Constants.startC) + 1 )
 
-      var caseD: Int = 0
+      /*var caseD: Int = 0
       val m = rnd.nextInt(100)
       m match {
-        case m if m <= 10 => caseD = 1 // Checkpoint
-        case m if m > 11 && m <= 20 => caseD = 2 // Alert
-        case m if m > 20 => caseD = 3 // Intervention
-      }
+        case m if m <= 75 => caseD = 1 // Checkpoint
+        case m if m > 75 && m <= 90 => caseD = 2 // Alert
+        case m if m > 90 => caseD = 3 // Intervention
+      }*/
+      var caseD = 3
 
       //TODO
       // PREPARE DATA
@@ -69,7 +68,6 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           + "," + Constants.picture))
           var codeP = pacerelle.consume
 
-          println("Nous avons bien recu le code numéro : " + codeP)
           producer.send(new ProducerRecord[String, String]("ALERT",
             "------ALERT------"
               +"\nID Drone : " + id.toString

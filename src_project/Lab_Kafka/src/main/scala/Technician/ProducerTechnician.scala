@@ -19,11 +19,12 @@ object ProducerTechnician extends App {
 
   // Periodic notifications simulation
   while(true) {
+    println("------------------------")
     print("Drone id :")
     val droneID = readLine()
     print("CODE : ")
     val CODE = readLine()
-    producer.send(new ProducerRecord[String, String]("SOS-RESPONSE-" + droneID.toString,
+    producer.send(new ProducerRecord[String, String]("SOS-RESPONSE", droneID.toString + "," +
       CODE.toString))
     println("Response sent")
   }
