@@ -30,7 +30,7 @@ if [ -f ~/.kafka_aliases ]; then
 fi 
 ```
 
-Finally, reload your profile using `source ~/.bashrc` to complete the setup. 
+Finally, reload your profile using `source ~/.bashrc` to complete the setup.
 
 And voilà! never again you will have to type those filthy long commands. Note that this will not add bonus points.
 

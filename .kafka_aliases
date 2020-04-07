@@ -1,6 +1,6 @@
 alias DC='docker-compose'
 alias DCEX='DC exec -T'
-alias kafka-console-producer='DCEX kafka kafka-console-producer --bootstrap-server localhost:9092'
+alias kafka-console-producer='DCEX kafka kafka-console-producer --broker-list kafka:9092'
 alias kafka-console-consumer='DCEX kafka kafka-console-consumer --bootstrap-server localhost:9092'
 alias kafka-topics='DCEX kafka kafka-topics --bootstrap-server localhost:9092'
 alias KCP='kafka-console-producer'
