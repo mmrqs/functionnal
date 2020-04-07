@@ -1,12 +1,18 @@
 package TriForce
 
+import java.io.{ByteArrayOutputStream, File}
 import java.text.{DateFormat, SimpleDateFormat}
-import java.util.{Calendar, Date, Properties}
+import java.util.{Base64, Calendar, Date, Properties}
 
 import Utils.Constants
+import javax.imageio.ImageIO
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
 class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
+  var topicAlert = "ALERT"
+  var topicPeriodicCheckpoint = "PERIODIC"
+  var topicSendHelp = "SOS-SENDER"
+  var topicImages = "IMAGES"
 
   override def run() {
     val props = new Properties()
@@ -16,7 +22,6 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
 
     // new producer
     val producer = new KafkaProducer[String, String](props)
-
 
     // Periodic notifications simulation
     while(true) {
@@ -35,8 +40,9 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
         case m if m > 90 => caseD = 3 // Intervention
       }
       
+      caseD = 2
 
-      // PREPARE DATA
+     // PREPARE DATA
       // Date
       val date: Date = Calendar.getInstance().getTime()
       val dateFormat: DateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss")
@@ -54,31 +60,44 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           val natureAlert = Constants.possibleAlerts.toSeq(
             rnd.nextInt(Constants.possibleAlerts.size)
           )
-          producer.send(new ProducerRecord[String, String]("ALERT",
+          producer.send(new ProducerRecord[String, String](topicAlert,
             "------ALERT------"
               + "\nID DRONE : " + id.toString
               + "\nDate : " + strDate
               + "\nCoordinates : ("+ x.toString +";"+ y.toString + ")"
-              + "\nAlert : "+ natureAlert))
+              + "\nAlert : "+ natureAlert
+              + "\nImage key : " + id.toString + "-" + strDate + "-" + natureAlert._1))
+          var baos = new ByteArrayOutputStream();
+          ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
+            "jpg", baos);
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + natureAlert._1,
+            Base64.getEncoder().encodeToString(baos.toByteArray())))
+
         }
         // HUMAN INTERVENTION
-        case _ => producer.send(new ProducerRecord[String, String]("SOS-SENDER",
+        case _ => producer.send(new ProducerRecord[String, String](topicSendHelp,
           "\nID DRONE : " +id.toString
             + "\nDATE : " + strDate
             + "\nCOORDINATES : ("+ x.toString +";"+ y.toString + ")"
             + "\nPICTURE OF THE INFRACTION : " + Constants.picture))
           var codeP = pacerelle.consume
 
-          producer.send(new ProducerRecord[String, String]("ALERT",
+          producer.send(new ProducerRecord[String, String](topicAlert,
             "------ALERT------"
               + "\nID DRONE : " + id.toString
               + "\nDATE : " + strDate
               + "\nCOORDINATES : ("+ x.toString +";"+ y.toString + ")"
               + "\nALERT CODE : "+ codeP
-              + "\nALERT DESCRIPTION : " + Constants.possibleAlerts.get(codeP).toString))
+              + "\nALERT DESCRIPTION : " + Constants.possibleAlerts.get(codeP).toString
+              + "\nImage Key :" + id.toString + "-" + strDate + "-" + codeP))
+
+          var baos = new ByteArrayOutputStream();
+          ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
+            "jpg", baos);
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + codeP,
+            Base64.getEncoder().encodeToString(baos.toByteArray())))
       }
       Thread.sleep(50000)
     }
   }
-
 }
