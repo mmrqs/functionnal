@@ -3,9 +3,11 @@ package TriForce
 class Bridge {
   var code = ""
   var set = false
+  var requestHelp = false
 
   def consume: String = {
     this.synchronized {
+      requestHelp = true
       while(!set) wait()
       set = false
       return code
@@ -17,7 +19,12 @@ class Bridge {
       while(set) wait()
       code = codeNumber
       set = true
+      requestHelp = false
       notify()
     }
+  }
+
+  def helpRequested: Boolean = {
+    return requestHelp
   }
 }

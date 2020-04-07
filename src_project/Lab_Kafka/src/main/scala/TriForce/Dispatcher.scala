@@ -49,6 +49,9 @@ class Dispatcher (var pacerelles : Map[Int, Bridge]) extends Thread {
           producer.send(new ProducerRecord[String, String]("SOS-SENDER",
             "Picture : " + Constants.picture
             +"\n ERROR WITH YOUR PRECEDENT SOLUTION : DRONE ID " +idDrone+" DOESN'T EXIST"))
+        } else if (!pacerelles.get(idDrone.toInt).get.requestHelp) {
+          producer.send(new ProducerRecord[String, String]("SOS-SENDER",
+              "\nERROR WITH YOUR PRECEDENT SOLUTION : DRONE ID " +idDrone+" DOESN'T NEED HELP"))
         } else {
           pacerelles.get(idDrone.toInt).get.produce(code)
         }

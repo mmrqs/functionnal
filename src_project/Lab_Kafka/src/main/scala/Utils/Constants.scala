@@ -25,6 +25,10 @@ object Constants {
     "004" -> "Mélanie a mit un air KO à ******",
     "005" -> "Sébastien deal des pizzas",
     "006" -> "Kévin lance une révolution",
-    "007" -> "Thomas bricole le drone"
+    "007" -> "Thomas bricole le drone",
+    "008" -> "Arrow s'entraine",
+    "009" -> "Le chocolat Milka MMAX est en promo",
+    "010" -> "Louis fait une remarque sexiste",
+    "011" -> "Louis mange des madeleines"
   )
 }
