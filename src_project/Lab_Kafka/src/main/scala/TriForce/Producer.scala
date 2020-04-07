@@ -34,8 +34,7 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
         case m if m > 75 && m <= 90 => caseD = 2 // Alert
         case m if m > 90 => caseD = 3 // Intervention
       }
-
-      caseD = 3
+      
 
       // PREPARE DATA
       // Date
