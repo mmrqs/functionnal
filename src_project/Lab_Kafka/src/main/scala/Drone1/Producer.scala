@@ -76,7 +76,7 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
               + "\nDate : " + strDate
               +"\nCoordinates : ("+ x.toString +";"+ y.toString + ")"
               +"\nAlert : "+ codeP
-              + Constants.possibleAlerts.get(codeP)))
+              + Constants.possibleAlerts.get(codeP).toString))
       }
       Thread.sleep(50000)
     }
