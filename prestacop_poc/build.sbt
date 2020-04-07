@@ -1,4 +1,4 @@
-name := "Lab_kafka"
+name := "prestacop_poc"
 
 version := "0.1"
 
