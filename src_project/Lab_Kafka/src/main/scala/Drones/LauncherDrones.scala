@@ -1,9 +1,10 @@
-package Drone1
+package Drones
 
-object LauncherDrone1 extends App {
+import TriForce.{Bridge, Dispatcher, Producer}
+
+object LauncherDrones extends App {
   var pacerelle = new Bridge
   val producer1 = new Producer(1, pacerelle).start()
-  //val consumer1 = new Consumer(1, pacerelle).start()
 
   var pacerelleMap = Map(
     1 -> pacerelle
