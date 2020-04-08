@@ -42,8 +42,6 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
         case m if m > 90 => caseD = 3 // Intervention
       }
       
-      caseD = 3
-
      // PREPARE DATA
       // Date
       val date: Date = Calendar.getInstance().getTime()
