@@ -63,12 +63,12 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
             rnd.nextInt(Constants.possibleAlerts.size)
           )
           producer.send(new ProducerRecord[String, String](topicAlert,
-            "------ALERT------"
-              + "\nID DRONE : " + id.toString
-              + "\nDate : " + strDate
-              + "\nCoordinates : ("+ x.toString +";"+ y.toString + ")"
-              + "\nAlert : "+ natureAlert
-              + "\nImage key : " + id.toString + "-" + strDate + "-" + natureAlert._1))
+            "droneId : " + id.toString + ","
+              + "date: " + strDate + ","
+              + "violationCode: "+ natureAlert._1 + ","
+              + "latitude: "+ x.toString + "," + "longitude: " + y.toString + ","
+              + "ImageId: " + id.toString + "-" + strDate + "-" + natureAlert._1))
+
           var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
@@ -84,15 +84,13 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           var codeP = pacerelle.consume
 
           producer.send(new ProducerRecord[String, String](topicAlert,
-            "------ALERT------"
-              + "\nID DRONE : " + id.toString
-              + "\nDATE : " + strDate
-              + "\nCOORDINATES : ("+ x.toString +";"+ y.toString + ")"
-              + "\nALERT CODE : "+ codeP
-              + "\nALERT DESCRIPTION : " + Constants.possibleAlerts.get(codeP).toString
-              + "\nImage Key :" + id.toString + "-" + strDate + "-" + codeP))
+              "droneId : " + id.toString + ","
+              + "date: " + strDate + ","
+                + "violationCode: "+ codeP + ","
+              + "latitude: "+ x.toString + "," + "longitude: " + y.toString + ","
+              + "ImageId: " + id.toString + "-" + strDate + "-" + codeP))
 
-          var baos = new ByteArrayOutputStream();
+      var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
           producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + codeP + ","

@@ -12,10 +12,14 @@ object LauncherDrones extends App {
   val passerelle3 = new Bridge
   val producer3 = new Producer(3, passerelle3).start()
 
+  val passerelle4 = new Bridge
+  val producer4 = new Producer(4, passerelle4).start()
+
   var pacerelleMap = Map(
     1 -> passerelle,
     2 -> passerelle2,
-    3 -> passerelle3
+    3 -> passerelle3,
+    4 -> passerelle4
   )
   var dispatcher = new Dispatcher(pacerelleMap).run()
 }
