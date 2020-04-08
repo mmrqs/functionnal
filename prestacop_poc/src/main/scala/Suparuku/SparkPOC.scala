@@ -1,4 +1,5 @@
 package Suparuku
+import Model.Ticket
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
@@ -6,7 +7,6 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import org.apache.spark._
 import org.apache.spark.streaming._
 import org.apache.log4j.Logger
-
 import org.apache.log4j.Level
 
 object SparkPOC extends App {
@@ -21,7 +21,7 @@ object SparkPOC extends App {
     "value.deserializer" -> classOf[StringDeserializer],
     "group.id" -> "i_must_be_unique_for_each_stream",
     "auto.offset.reset" -> "earliest",
-    "enable.auto.commit" -> (false: java.lang.Boolean),
+    "enable.auto.commit" -> (false: java.lang.Boolean)
   )
 
   val topics = Array("ALERT")
@@ -31,10 +31,7 @@ object SparkPOC extends App {
     Subscribe[String, String](topics, kafkaParams)
   )
 
-  stream.foreachRDD(rdd => rdd.map(record => record.value.split(',')).foreach(s => println("The key is "
-    + s.apply(0)
-    + " and the value is "
-    + s.apply(1))))
+  stream.foreachRDD(rdd => rdd.map(record => new Ticket(record.value().split(','))).foreach(println))
   streamingContext.start()
   streamingContext.awaitTermination()
 }
