@@ -24,5 +24,4 @@ class BridgeTech {
       return toDo.size
     }
   }
-
 }

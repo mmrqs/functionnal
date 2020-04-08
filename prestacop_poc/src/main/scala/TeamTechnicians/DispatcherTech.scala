@@ -32,6 +32,10 @@ class DispatcherTech (var bridgesTech : Seq[BridgeTech] ) extends Thread {
     }
   }
 
+  /**
+   *
+   * @return the least busy technician
+   */
   def whoIsBusy: BridgeTech = {
     var lazyTechTasks = bridgesTech(0).amIBusy
     var lazyTech = bridgesTech(0)

@@ -39,7 +39,7 @@ object BigBoss extends App {
   while(true) {
     println("------------------------")
     var toCheck = bridgeBigBoss.consume.split(",")
-    println("Tech " + toCheck(0) + " input : " + toCheck(2) + "for drone ID : " + toCheck(1))
+    println("Tech " + toCheck(0) + " input : " + toCheck(2) + " for drone ID : " + toCheck(1))
 
     breakable {
       while (true) {

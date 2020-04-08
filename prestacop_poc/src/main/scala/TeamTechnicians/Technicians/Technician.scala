@@ -16,7 +16,10 @@ class Technician (var id : Int, var bridge : BridgeTech, var bridgeBigBoss: Brid
       val natureAlert = Constants.possibleAlerts.toSeq(
         rnd.nextInt(Constants.possibleAlerts.size)
       )
+
+      //to simulate the work of the tech
       Thread.sleep(20000)
+      // he send his answer to the Big Boss
       bridgeBigBoss.produce(id.toString + "," + string(0)+ "," + natureAlert._1)
     }
   }
