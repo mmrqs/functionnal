@@ -72,7 +72,7 @@ List of the channels you must create in order to run the project :
 
 - LauncherDrones : launch 2 threads : Bridge and Producer
 
-## TriFroce 
+## TriForce 
 
 - Dispatcher : Receives the operator message and send it the right Producer through the Bridge
 - Producer : Send messages
