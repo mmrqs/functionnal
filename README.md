@@ -49,11 +49,8 @@ cp .kafka_aliases ~/ && echo "[ -f ~/.kafka_aliases ] && . ~/.kafka_aliases" >> 
 Order for the run :
 
 1. LauncherDrones
-2. ProducerTechnician
-3. ConsumerTechnician
-4. ConsumerBigBrother
-
-The order for the last 3 modules does not matter. However, you must launch "LauncherDrones" first.
+2. BigBoss
+3. ConsumerBigBrother
 
 # Kafka Topics
 
@@ -65,12 +62,13 @@ List of the channels you must create in order to run the project :
 | ALERT                     | Topic for messages in case of violation. | 
 | PERIODIC                  | Topic for messages sent regularly by each drones. | 
 | SOS-RESPONSE              | Topic for messages sent by an operator to send the right violation code to a specific drone which required his help|
+| IMAGES                    | Topic for violation pictures |
 
 # Organization of the code: 
 
 ## Drones
 
-- LauncherDrones : launch 2 threads : Bridge and Producer
+- LauncherDrones : launch 2 threads : Bridge and Producer for each drone
 
 ## TriForce 
 
@@ -78,11 +76,18 @@ List of the channels you must create in order to run the project :
 - Producer : Send messages
 - Bridge : allows the Dispatcher and the Producer to communicate
 
-## Technician 
+## TeamTechnician 
 
-- ConsumerTechnician : receives help request messages from drones
-- ProducerTechnician : responds to the request for help from a specific drone
+- DispatcherTech : receives all the help request messages from drones and dispatch to the least busy technician
 
+### Technician
+
+- BridgeTech : allow the dispatcher to communicate with the technicians & the technicians to communicate thread-safely with the BigBoss
+- Technician : receives the help request, handle it and then send the response to the BigBoss through a bridge
+  
+### BigBoss
+
+- BigBoss : receives the handled help request, decides if the error code is correct. If yes, it sends it directly to the drone, otherwise it corrects it and then sends the response
 
 ## BigBrother
 
