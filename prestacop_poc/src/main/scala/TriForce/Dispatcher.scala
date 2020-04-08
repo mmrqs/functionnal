@@ -21,7 +21,6 @@ class Dispatcher (var pacerelles : Map[Int, Bridge]) extends Thread {
     val consumer: KafkaConsumer[String, String] = new KafkaConsumer[String, String](props)
     consumer.subscribe(util.Arrays.asList("SOS-RESPONSE"))
 
-    //TODO
     val prope = new Properties()
     prope.put("bootstrap.servers", "localhost:9092")
     prope.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")

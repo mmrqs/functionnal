@@ -42,7 +42,7 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
         case m if m > 90 => caseD = 3 // Intervention
       }
       
-      caseD = 2
+      caseD = 3
 
      // PREPARE DATA
       // Date
@@ -79,10 +79,8 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
         }
         // HUMAN INTERVENTION
         case _ => producer.send(new ProducerRecord[String, String](topicSendHelp,
-          "\nID DRONE : " +id.toString
-            + "\nDATE : " + strDate
-            + "\nCOORDINATES : ("+ x.toString +";"+ y.toString + ")"
-            + "\nPICTURE OF THE INFRACTION : " + Constants.picture))
+          id.toString + "," + strDate + "," + x.toString +","+ y.toString + "," + Constants.picture))
+
           var codeP = pacerelle.consume
 
           producer.send(new ProducerRecord[String, String](topicAlert,
@@ -100,7 +98,7 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + codeP + ","
             +Base64.getEncoder().encodeToString(baos.toByteArray())))
       }
-      Thread.sleep(50000)
+      Thread.sleep(1000)
     }
   }
 }
