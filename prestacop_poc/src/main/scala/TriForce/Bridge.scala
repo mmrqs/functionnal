@@ -25,6 +25,6 @@ class Bridge {
   }
 
   def helpRequested: Boolean = {
-    return requestHelp
+    requestHelp
   }
 }

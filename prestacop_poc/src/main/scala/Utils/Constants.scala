@@ -1,19 +1,19 @@
 package Utils
 
 object Constants {
-  // bornes random id
+  // random id range
   val start = 1
   val end   = 10
 
-  // bornes coordinates
+  // random coordinate range
   val startC = 1
   val endC = 100
 
-  //bornes cases :
+  // random cases range
   val startP = 1
   val endP = 3
 
-  //Picture :
+  // picture :
   val picture = "http://mypicture.com"
 
   // Alert message possibilities
