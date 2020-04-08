@@ -20,8 +20,10 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
     props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 
+    
     // new producer
     val producer = new KafkaProducer[String, String](props)
+
 
     // Periodic notifications simulation
     while(true) {
@@ -70,8 +72,9 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
-          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + natureAlert._1,
-            Base64.getEncoder().encodeToString(baos.toByteArray())))
+
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + natureAlert._1 + ","
+            +Base64.getEncoder().encodeToString(baos.toByteArray())))
 
         }
         // HUMAN INTERVENTION
@@ -94,8 +97,8 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
-          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + codeP,
-            Base64.getEncoder().encodeToString(baos.toByteArray())))
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + codeP + ","
+            +Base64.getEncoder().encodeToString(baos.toByteArray())))
       }
       Thread.sleep(50000)
     }
