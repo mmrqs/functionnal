@@ -22,7 +22,6 @@ object SparkPOC extends App {
     "group.id" -> "i_must_be_unique_for_each_stream",
     "auto.offset.reset" -> "earliest",
     "enable.auto.commit" -> (false: java.lang.Boolean),
-    "key.separator" -> ","
   )
 
   val topics = Array("ALERT")
