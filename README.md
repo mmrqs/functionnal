@@ -46,11 +46,16 @@ cp .kafka_aliases ~/ && echo "[ -f ~/.kafka_aliases ] && . ~/.kafka_aliases" >> 
 
 ## Application part : 
 
-Order for the run :
+Order for the run drone part :
 
 1. LauncherDrones
 2. BigBoss
 3. ConsumerBigBrother
+
+Order for the CSV part : 
+
+1. ReadAndSendTickets => to send the csv data to kafka (please do not forget to change the file name)
+2. SparkPOC to display the statistics 
 
 # Kafka Topics
 
@@ -75,6 +80,15 @@ List of the channels you must create in order to run the project :
 - Dispatcher : Receives the operator message and send it the right Producer through the Bridge
 - Producer : Send messages
 - Bridge : allows the Dispatcher and the Producer to communicate
+
+## Model
+
+- ReadAndSendTickets : read the csv and send it to kafka
+- Tickets : representation of each row of the csv 
+  
+## Supakuru
+
+- SparkPOC : read all the data contained in kafka and makes statistics (please be aware that there is a bug for MACOS X users only, the graphs show and few seconds latter return an error)
 
 ## TeamTechnician 
 
