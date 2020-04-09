@@ -59,7 +59,7 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
             rnd.nextInt(Constants.possibleAlerts.size)
           )
           producer.send(new ProducerRecord[String, String](topicAlert,
-            new Ticket(id, date.getTime, natureAlert._1.toInt, x, y, id + "-" + date + "-" + natureAlert._1).toString))
+            new Ticket(id, date.getTime, natureAlert._1.toInt, x, y, id + "-" + date.getTime + "-" + natureAlert._1).toString))
 
           var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
