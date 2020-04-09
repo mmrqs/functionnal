@@ -1,9 +1,9 @@
 package TriForce
 
 import java.io.{ByteArrayOutputStream, File}
-import java.text.{DateFormat, SimpleDateFormat}
 import java.util.{Base64, Calendar, Date, Properties}
 
+import Model.Ticket
 import Utils.Constants
 import javax.imageio.ImageIO
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
@@ -31,29 +31,27 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
       val rnd = new scala.util.Random
 
       // Geographic coordinates
-      val x = Constants.startC + rnd.nextInt( (Constants.endC - Constants.startC) + 1 )
-      val y = Constants.startC + rnd.nextInt( (Constants.endC - Constants.startC) + 1 )
+      val x = Constants.startC + rnd.nextInt( (Constants.endC - Constants.startC) + 1 ).toLong
+      val y = Constants.startC + rnd.nextInt( (Constants.endC - Constants.startC) + 1 ).toLong
 
       var caseD: Int = 0
       val m = rnd.nextInt(100)
       m match {
         case m if m <= 75 => caseD = 1 // Checkpoint
-        case m if m > 75 && m <= 90 => caseD = 2 // Alert
-        case m if m > 90 => caseD = 3 // Intervention
+        case m if m > 75 && m <= 99 => caseD = 2 // Alert
+        case m if m > 99 => caseD = 3 // Intervention
       }
       
      // PREPARE DATA
       // Date
-      val date: Date = Calendar.getInstance().getTime()
-      val dateFormat: DateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss")
-      val strDate: String = dateFormat.format(date)
+      val date: Date = Calendar.getInstance().getTime
 
       caseD match {
         // PERIODIC NOTIFICATION
         case 1 => producer.send(new ProducerRecord[String, String]("PERIODIC",
           "------CHECKPOINT------"
             + "\nID Drone : " + id.toString
-            + "\nDate : " + strDate
+            + "\nDate : " + date
             + "\nCoordinates : ("+ x.toString +";"+ y.toString + ")"))
         // ALERT
         case 2 => {
@@ -61,37 +59,29 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
             rnd.nextInt(Constants.possibleAlerts.size)
           )
           producer.send(new ProducerRecord[String, String](topicAlert,
-            "droneId : " + id.toString + ","
-              + "date: " + strDate + ","
-              + "violationCode: "+ natureAlert._1 + ","
-              + "latitude: "+ x.toString + "," + "longitude: " + y.toString + ","
-              + "ImageId: " + id.toString + "-" + strDate + "-" + natureAlert._1))
+            new Ticket(id, date.getTime, natureAlert._1.toInt, x, y, id + "-" + date + "-" + natureAlert._1).toString))
 
           var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
 
-          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + natureAlert._1 + ","
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + date.getTime + "-" + natureAlert._1 + ","
             +Base64.getEncoder().encodeToString(baos.toByteArray())))
 
         }
         // HUMAN INTERVENTION
         case _ => producer.send(new ProducerRecord[String, String](topicSendHelp,
-          id.toString + "," + strDate + "," + x.toString +","+ y.toString + "," + Constants.picture))
+          id.toString + "," + date + "," + x.toString +","+ y.toString + "," + Constants.picture))
 
-          var codeP = pacerelle.consume
+          val codeP = pacerelle.consume
 
           producer.send(new ProducerRecord[String, String](topicAlert,
-              "droneId : " + id.toString + ","
-              + "date: " + strDate + ","
-                + "violationCode: "+ codeP + ","
-              + "latitude: "+ x.toString + "," + "longitude: " + y.toString + ","
-              + "ImageId: " + id.toString + "-" + strDate + "-" + codeP))
+            new Ticket(id, date.getTime, codeP.toInt, x, y, id + "-" + date + "-" + codeP.toInt).toString))
 
       var baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
-          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + strDate + "-" + codeP + ","
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + date.getTime + "-" + codeP + ","
             +Base64.getEncoder().encodeToString(baos.toByteArray())))
       }
       Thread.sleep(1000)
