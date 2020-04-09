@@ -43,7 +43,11 @@ class Ticket(droneId : Int, date: Long, violationCode: Int, latitude: Float, lon
 
   def getDrone: Int = { droneId }
   def getVC: Int = { violationCode }
-  def getDate: Long = { date }
+  def getDate: String = {
+    val df:SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd")
+    val newdate:String = df.format(date.toLong)
+    return newdate
+  }
   def getLat: Float = { latitude }
   def getLon: Float = { longitude }
   def getImg: String = { imageId }

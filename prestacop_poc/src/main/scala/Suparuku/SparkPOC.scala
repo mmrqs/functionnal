@@ -1,13 +1,12 @@
 package Suparuku
 import Model.Ticket
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark.streaming.kafka010._
-import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
-import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+import org.apache.log4j.{Level, Logger}
 import org.apache.spark._
 import org.apache.spark.streaming._
-import org.apache.log4j.Logger
-import org.apache.log4j.Level
+import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
+import org.apache.spark.streaming.kafka010._
 
 import scala.collection.mutable
 
@@ -46,6 +45,18 @@ object SparkPOC extends App {
       }
     })
   )
+
+
+
+  // Dates with number of violation
+
+  stream.foreachRDD(rdd => rdd.map(record => new Ticket(record.value().split(',')))
+    .map(ticket => (ticket.getDate, 1))
+    .reduceByKey(_ + _)
+    .sortByKey(false, 1)
+    .takeOrdered(10)(Ordering[Int].reverse.on(t => t._2))
+    .foreach(println))
+
 
   streamingContext.start()
   streamingContext.awaitTerminationOrTimeout(60000)
