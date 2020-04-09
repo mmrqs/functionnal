@@ -61,8 +61,6 @@ object SparkPOC extends App {
     })
   )
 
-
-
   streamingContext.start()
   streamingContext.awaitTerminationOrTimeout(60000)
 
@@ -96,12 +94,11 @@ object SparkPOC extends App {
   plot3.show
 
   // Graph TOP 20 Dates with number of violation
-  var plot4 = Vegas("Top 20 most perpetrated violation code : ").
+  var plot4 = Vegas("Top 20 dates with most violations : ").
     withData(
       hashmapDate.toSeq.sortBy(_._1).reverse.take(20).map(x => Map("Date" -> x._1, "Number of violations" -> x._2))
     ).encodeY("Number of violations", Quant)
     .encodeX("Date", Nom).
     mark(Line)
   plot4.show
-  
 }

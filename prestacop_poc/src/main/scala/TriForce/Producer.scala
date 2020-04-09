@@ -1,6 +1,7 @@
 package TriForce
 
 import java.io.{ByteArrayOutputStream, File}
+import java.time.temporal.ChronoField
 import java.util.{Base64, Calendar, Date, Properties}
 
 import Model.Ticket
@@ -44,24 +45,24 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
       
      // PREPARE DATA
       // Date
-      val date: Date = Calendar.getInstance().getTime
+      val date: Long = Calendar.getInstance().getTimeInMillis
 
       caseD match {
         // PERIODIC NOTIFICATION
-        case 1 => producer.send(new ProducerRecord[String, String]("PERIODIC", id.toString + "," + date.getTime + "," + x + "," + y + "," + rnd.nextInt(100).toFloat / 100))
+        case 1 => producer.send(new ProducerRecord[String, String]("PERIODIC", id.toString + "," + date + "," + x + "," + y + "," + rnd.nextInt(100).toFloat / 100))
         // ALERT
         case 2 => {
           val natureAlert = Constants.possibleAlerts.toSeq(
             rnd.nextInt(Constants.possibleAlerts.size)
           )
           producer.send(new ProducerRecord[String, String](topicAlert,
-            new Ticket(id, date.getTime, natureAlert._1.toInt, x, y, id + "-" + date.getTime + "-" + natureAlert._1).toString))
+            new Ticket(id, date, natureAlert._1.toInt, x, y, id + "-" + date + "-" + natureAlert._1).toString))
 
-          var baos = new ByteArrayOutputStream();
+          val baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
 
-          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + date.getTime + "-" + natureAlert._1 + ","
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + date + "-" + natureAlert._1 + ","
             +Base64.getEncoder().encodeToString(baos.toByteArray())))
 
         }
@@ -72,12 +73,12 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
           val codeP = pacerelle.consume
 
           producer.send(new ProducerRecord[String, String](topicAlert,
-            new Ticket(id, date.getTime, codeP.toInt, x, y, id + "-" + date + "-" + codeP.toInt).toString))
+            new Ticket(id, date, codeP.toInt, x, y, id + "-" + date + "-" + codeP.toInt).toString))
 
-      var baos = new ByteArrayOutputStream();
+      val baos = new ByteArrayOutputStream();
           ImageIO.write(ImageIO.read(new File(Constants.possibleImages(rnd.nextInt(Constants.possibleImages.size)))),
             "jpg", baos);
-          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + date.getTime + "-" + codeP + ","
+          producer.send(new ProducerRecord[String, String](topicImages, id.toString + "-" + date + "-" + codeP + ","
             +Base64.getEncoder().encodeToString(baos.toByteArray())))
       }
       Thread.sleep(1000)
