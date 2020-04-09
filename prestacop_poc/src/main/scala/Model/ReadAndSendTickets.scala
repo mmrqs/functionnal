@@ -13,7 +13,7 @@ object ReadAndSendTickets extends App {
   props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
   props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 
-  val pathToFile = "/home/pridethedaemon/Documents/scala/functionnal/data/2015.csv"
+  val pathToFile = "/Users/melaniemarques/Downloads/nyc-parking-tickets/Parking_Violations_Issued_-_Fiscal_Year_2015.csv"
 
   val bufferedSource = Source.fromFile(pathToFile)
   val simpleDateFormat = new SimpleDateFormat("mm/dd/yyyy")
