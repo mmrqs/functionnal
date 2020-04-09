@@ -40,4 +40,11 @@ class Ticket(droneId : Int, date: Long, violationCode: Int, latitude: Float, lon
   override def toString: String = {
     droneId + "," + date + "," + violationCode + "," + latitude + "," + longitude + "," + imageId
   }
+
+  def getDrone: Int = { droneId }
+  def getVC: Int = { violationCode }
+  def getDate: Long = { date }
+  def getLat: Float = { latitude }
+  def getLon: Float = { longitude }
+  def getImg: String = { imageId }
 }

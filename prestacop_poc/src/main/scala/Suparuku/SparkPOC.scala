@@ -13,7 +13,7 @@ object SparkPOC extends App {
   Logger.getLogger("org").setLevel(Level.OFF)
   Logger.getLogger("akka").setLevel(Level.OFF)
   val conf = new SparkConf().setAppName("FDP").setMaster("local[*]")
-  val streamingContext = new StreamingContext(conf, Seconds(1))
+  val streamingContext = new StreamingContext(conf, Seconds(10))
 
   val kafkaParams = Map[String, Object] (
     "bootstrap.servers" -> "localhost:9092",
@@ -31,7 +31,13 @@ object SparkPOC extends App {
     Subscribe[String, String](topics, kafkaParams)
   )
 
-  stream.foreachRDD(rdd => rdd.map(record => new Ticket(record.value().split(','))).foreach(println))
+  stream.foreachRDD(rdd => rdd.map(record => new Ticket(record.value().split(',')))
+    .map(ticket => (ticket.getVC, 1))
+    .reduceByKey(_ + _)
+    .sortByKey(false, 1)
+    .takeOrdered(10)(Ordering[Int].reverse.on(t => t._2))
+    .foreach(println))
+
   streamingContext.start()
   streamingContext.awaitTermination()
 }
