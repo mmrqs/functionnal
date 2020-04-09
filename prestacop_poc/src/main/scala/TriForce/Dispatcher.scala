@@ -9,6 +9,11 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
 import scala.collection.JavaConverters._
 
+/**
+ * Receives the operator message and send it the right Producer through his Bridge
+ * @param pacerelles
+ */
+
 class Dispatcher (var pacerelles : Map[Int, Bridge]) extends Thread {
 
   override def run() {
@@ -40,6 +45,7 @@ class Dispatcher (var pacerelles : Map[Int, Bridge]) extends Thread {
         println("-----------------------------------------------------")
         println("Received ERROR CODE: " + string)
 
+        // checks if the response is correct :
         if (Constants.possibleAlerts.get(code)== None) {
           producer.send(new ProducerRecord[String, String]("SOS-SENDER", idDrone
             +"\n" + Constants.picture

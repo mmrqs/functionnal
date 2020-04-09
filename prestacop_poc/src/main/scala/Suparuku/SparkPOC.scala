@@ -12,6 +12,10 @@ import vegas._
 
 import scala.collection.mutable
 
+/**
+ * Read all the alerts and display statistics
+ */
+
 object SparkPOC extends App {
   Logger.getLogger("org").setLevel(Level.OFF)
   Logger.getLogger("akka").setLevel(Level.OFF)
@@ -34,7 +38,10 @@ object SparkPOC extends App {
     Subscribe[String, String](topics, kafkaParams)
   )
 
+  // HashMap with the number of infractions according to a specific violation code
   val hashmapVC = new mutable.HashMap[Int, Int]()
+
+  // HashMap with the number of infractions according to a specific date
   val hashmapDate = new mutable.HashMap[String, Int]()
 
   stream.foreachRDD(rdd => rdd.map(record => new Ticket(record.value().split(',')))
@@ -77,7 +84,7 @@ object SparkPOC extends App {
     mark(Bar)
   plot.show
 
-  // Graph less perpetrated violation code :
+  // 10 less perpetrated violation code :
   var plot2 = Vegas("Top 10 less perpetrated violation code : ").
     withData(
       hashmapVC.toSeq.sortBy(_._2).take(10).map(x => Map("Violation code" -> x._1, "Number of violations" -> x._2))
@@ -86,7 +93,7 @@ object SparkPOC extends App {
     mark(Bar)
   plot2.show
 
-  // Graph most perpetrated violation code
+  // 10 most perpetrated violation code
   var plot3 = Vegas("Top 10 most perpetrated violation code : ").
     withData(
       hashmapVC.toSeq.sortBy(_._2).reverse.take(10).map(x => Map("Violation code" -> x._1, "Number of violations" -> x._2))
@@ -95,7 +102,7 @@ object SparkPOC extends App {
     mark(Bar)
   plot3.show
 
-  // Graph TOP 20 Dates with number of violation
+  // TOP 20 Dates with number of violation
   var plot4 = Vegas("Top 20 most perpetrated violation code : ").
     withData(
       hashmapDate.toSeq.sortBy(_._1).reverse.take(20).map(x => Map("Date" -> x._1, "Number of violations" -> x._2))
@@ -103,5 +110,5 @@ object SparkPOC extends App {
     .encodeX("Date", Nom).
     mark(Line)
   plot4.show
-  
+
 }

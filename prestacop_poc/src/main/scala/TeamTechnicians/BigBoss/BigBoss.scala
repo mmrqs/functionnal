@@ -9,6 +9,11 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import scala.io.StdIn.readLine
 import scala.util.control.Breaks.{break, breakable}
 
+/**
+ *  receives the handled help request, decides if the error code is correct.
+ *  If yes, it sends it directly to the drone, otherwise it corrects it and then sends the response
+ */
+
 object BigBoss extends App {
 
   //launches bridges for techs
@@ -45,10 +50,12 @@ object BigBoss extends App {
       while (true) {
         println("Do you confirm?  y/n")
         val answer = readLine()
+        // if he confirms, the answer is sent to the drone through the SOS-RESPONSE topic
         if (answer == "y") {
           producer.send(new ProducerRecord[String, String]("SOS-RESPONSE", toCheck(1) + "," +
             toCheck(2)))
           break
+          //otherwise, the big boss enters manually the answer
         } else if (answer == "n") {
           print("Drone id :")
           val droneID = readLine()

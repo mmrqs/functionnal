@@ -2,6 +2,10 @@ package Drones
 
 import TriForce.{Bridge, Dispatcher, Producer}
 
+/**
+ * Launches launch 2 threads : Bridge and Producer for each drone
+ */
+
 object LauncherDrones extends App {
   var passerelle = new Bridge
   val producer1 = new Producer(1, passerelle).start()
@@ -21,5 +25,6 @@ object LauncherDrones extends App {
     3 -> passerelle3,
     4 -> passerelle4
   )
+
   var dispatcher = new Dispatcher(pacerelleMap).run()
 }
