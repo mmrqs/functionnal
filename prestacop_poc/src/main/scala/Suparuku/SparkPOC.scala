@@ -9,6 +9,8 @@ import org.apache.spark.streaming._
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 
+import scala.collection.mutable
+
 object SparkPOC extends App {
   Logger.getLogger("org").setLevel(Level.OFF)
   Logger.getLogger("akka").setLevel(Level.OFF)
@@ -31,13 +33,21 @@ object SparkPOC extends App {
     Subscribe[String, String](topics, kafkaParams)
   )
 
+  val hashmapVC = new mutable.HashMap[Int, Int]()
+
   stream.foreachRDD(rdd => rdd.map(record => new Ticket(record.value().split(',')))
     .map(ticket => (ticket.getVC, 1))
     .reduceByKey(_ + _)
-    .sortByKey(false, 1)
-    .takeOrdered(10)(Ordering[Int].reverse.on(t => t._2))
-    .foreach(println))
+    .foreach(tuple => {
+      if (hashmapVC.contains(tuple._1)) {
+        hashmapVC(tuple._1) += tuple._2
+      } else {
+        hashmapVC += tuple
+      }
+    })
+  )
 
   streamingContext.start()
-  streamingContext.awaitTermination()
+  streamingContext.awaitTerminationOrTimeout(60000)
+  print(hashmapVC.toSeq.sortBy(_._2))
 }
