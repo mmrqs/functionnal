@@ -9,6 +9,11 @@ import TeamTechnicians.Technicians.BridgeTech
 
 import scala.collection.JavaConverters._
 
+/**
+ * receives all the help request messages from drones and dispatch to the least busy technician
+ * @param bridgesTech
+ */
+
 class DispatcherTech (var bridgesTech : Seq[BridgeTech] ) extends Thread {
   override def run () {
     val props = new Properties ()

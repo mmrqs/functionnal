@@ -2,6 +2,16 @@ package Model
 
 import java.text.SimpleDateFormat
 
+/**
+ * Model for messages sent to kafka
+ * @param droneId : Int Id of the drone which recorded the violation / 0 if it comes from the csv
+ * @param date : Date of the infraction
+ * @param violationCode
+ * @param latitude
+ * @param longitude
+ * @param imageId : id of the violation picture
+ */
+
 class Ticket(droneId : Int, date: Long, violationCode: Int, latitude: Float, longitude: Float, imageId: String) {
   def this(droneId: Int, data: Array[String], imageId: String, simpleDateFormat: SimpleDateFormat) = this(
     droneId,
