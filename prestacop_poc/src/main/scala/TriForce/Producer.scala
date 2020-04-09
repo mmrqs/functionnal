@@ -48,11 +48,7 @@ class Producer(var id : Int, var pacerelle: Bridge) extends Thread {
 
       caseD match {
         // PERIODIC NOTIFICATION
-        case 1 => producer.send(new ProducerRecord[String, String]("PERIODIC",
-          "------CHECKPOINT------"
-            + "\nID Drone : " + id.toString
-            + "\nDate : " + date
-            + "\nCoordinates : ("+ x.toString +";"+ y.toString + ")"))
+        case 1 => producer.send(new ProducerRecord[String, String]("PERIODIC", id.toString + "," + date.getTime + "," + x + "," + y + "," + rnd.nextInt(100).toFloat / 100))
         // ALERT
         case 2 => {
           val natureAlert = Constants.possibleAlerts.toSeq(
