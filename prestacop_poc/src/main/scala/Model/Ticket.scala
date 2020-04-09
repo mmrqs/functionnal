@@ -1,10 +1,18 @@
 package Model
 
-class Ticket(droneId : Int, date: String, violationCode: Int, latitude: Float, longitude: Float, imageId: String) {
-  def this(droneId: Int, data: Array[String], imageId: String) = this(
+import java.text.SimpleDateFormat
+
+class Ticket(droneId : Int, date: Long, violationCode: Int, latitude: Float, longitude: Float, imageId: String) {
+  def this(droneId: Int, data: Array[String], imageId: String, simpleDateFormat: SimpleDateFormat) = this(
     droneId,
     //date
-    data.apply(4),
+    data.lift(4).map(d => {
+      try {
+        simpleDateFormat.parse(d).getTime
+      } catch {
+        case _ => 0
+      }
+    }).get,
     //violation code
     data.lift(5).map(vc => {
       try {
@@ -18,11 +26,11 @@ class Ticket(droneId : Int, date: String, violationCode: Int, latitude: Float, l
     data.lift(44).getOrElse("0").toFloat,
     imageId
   )
-  def this(droneId: Int, data: Array[String]) = this(droneId, data, "none")
+  def this(droneId: Int, data: Array[String], simpleDateFormat: SimpleDateFormat) = this(droneId, data, "none", simpleDateFormat)
 
   def this(data: Array[String]) = this(
     data.apply(0).toInt,
-    data.apply(1),
+    data.apply(1).toLong,
     data.apply(2).toInt,
     data.apply(3).toFloat,
     data.apply(4).toFloat,
